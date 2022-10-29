@@ -25,9 +25,9 @@ class Viking(Soldier): # new property, the name
     def receiveDamage(self, damage):
         self.health = self.health - damage
         if self.health > 0:
-            return f"{self.name} has received {damage} points of damage."
+            return f"{self.name} has received {damage} points of damage"
         else:
-            return f"{self.name} has died in act of combat."
+            return f"{self.name} has died in act of combat"
     
     def battleCry(self):
         return f"Odin Owns You All!"
@@ -42,9 +42,9 @@ class Saxon(Soldier):
     def receiveDamage(self, damage):
         self.health = self.health - damage
         if self.health > 0:
-            return f"A SAxon has received {damage} points of damage."
-        elif self.health < 0:
-            return f"A SAxon has died in act of combat."
+            return f"A Saxon has received {damage} points of damage"
+        else:
+            return f"A Saxon has died in combat"
 
 # War
 
@@ -82,6 +82,6 @@ class War():
         if len(self.saxonArmy) == 0:
             return "Vikings have won the war of the century!"
         elif len(self.vikingArmy) == 0:
-            return "Saxons have fought for their lives and survive another day... "
+            return "Saxons have fought for their lives and survive another day..."
         else:
-            return f"Vikings and Saxons are still in the thick of battle. "
+            return f"Vikings and Saxons are still in the thick of battle."
