@@ -3,12 +3,10 @@
 import random
 #hacer que los tests funcionen
 class Soldier:
-    
     def __init__(self, health, strength):
-        
         self.health = health
         self.strength = strength
-    
+
     def attack(self):
         
         return self.strength #should return the strength property of the Soldier
@@ -22,12 +20,9 @@ class Soldier:
 
 class Viking(Soldier): # new property, the name
     def __init__(self, name, health, strength):
-        
-        super().__init__(self, health, strength)
+        super().__init__(health=health, strength=strength)
         self.name = name
 
-    def attack(self):
-        return self.strength
 
     def receiveDamage(self, damage):
         self.health = self.health - damage
